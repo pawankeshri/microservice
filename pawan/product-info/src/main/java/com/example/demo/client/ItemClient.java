@@ -1,0 +1,25 @@
+package com.example.demo.client;
+
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.demo.model.Item;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
+@Component
+public class ItemClient {
+
+	private String infoUri = "http://localhost:9500/iteminfo";
+	
+	@HystrixCommand(fallbackMethod="getItemFromCache")
+	public Item getItemInfo(){
+		return new RestTemplate().getForObject(infoUri, Item.class);
+		}
+	
+	public Item getItemFromCache(){
+		Item item = new Item();
+		item.setItemCode("101");
+		item.setItemInfo("Baleno");
+		return item;
+	}
+}

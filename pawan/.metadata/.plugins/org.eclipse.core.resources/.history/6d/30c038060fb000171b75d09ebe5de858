@@ -1,0 +1,7 @@
+package com.example.model;
+
+public class Item {
+
+	private String itemCode;
+	private String ItemInfo;
+}

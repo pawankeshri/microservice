@@ -1,0 +1,9 @@
+package com.example.service.demo;
+
+import com.example.demo.model.Product;
+
+public interface PrdoductInfoService {
+
+	Product getproduct();	
+	
+}

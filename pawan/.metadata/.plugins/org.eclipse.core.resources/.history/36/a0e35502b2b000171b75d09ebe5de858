@@ -1,0 +1,6 @@
+server:
+  port: 9500
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761

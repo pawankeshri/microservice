@@ -1,0 +1,12 @@
+package com.example.demo.client;
+
+import org.springframework.web.client.RestTemplate;
+
+public class ItemClient {
+
+	private String infoUri = "http://localhost:9500/getItemDetails"
+	public String getItemInfo(){
+		String infojson = new RestTemplate().getForObject(infoUri, String.class);
+		return inforjson;
+	}
+}

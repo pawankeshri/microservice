@@ -1,0 +1,23 @@
+package com.example.demo.service;
+
+import com.example.demo.model.Product;
+
+public class ProductInfoServiceImpl implements PrdoductInfoService{
+
+	@Override
+	public Product getProduct(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	@HystrixCommand(fallbackMethod = "defaultReview")
+	public String getItemReview(int id) {
+		String itemReviewJson = new RestTemplate().getForObject(reviewUri, String.class, id);
+		return itemReviewJson;
+	}
+
+	private String defaultReview(int id) {
+		return "{\"id\":1,\"rating\":\"un-rated\",\"reviews\":\"un-reviewed\"}";
+	}
+}

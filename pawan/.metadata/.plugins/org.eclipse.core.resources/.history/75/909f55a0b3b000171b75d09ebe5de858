@@ -1,0 +1,13 @@
+package com.example.demo.service;
+
+import com.example.demo.model.Catalog;
+
+public class CatalogInfoService implements CatalogInfo {
+
+	@Override
+	public Catalog getCatalogInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.example.demo.service;
+
+import com.example.demo.model.Catalog;
+
+public class CatalogInfoService implements CatalogInfo {
+
+	@Override
+	public Catalog getCatalogInfo() {
+		Catalog catalog = new Catalog();
+		catalog.setCatId("1");
+		catalog.setCatInfo("Apple");
+		return catalog;
+	}
+
+}

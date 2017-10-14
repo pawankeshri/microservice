@@ -1,0 +1,9 @@
+server:
+  port: 9797
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761
+ITEM-INFO:
+  ribbon:
+    listofServers: localhost:41729,localhost:39649  

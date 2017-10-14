@@ -1,0 +1,48 @@
+package com.example.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.demo.model.Catalog;
+import com.example.demo.model.Item;
+import com.example.demo.service.CatalogInfoService;
+
+
+@RestController
+public class CatalogInfoController {
+
+	private String infoUri = "http://localhost:9500/iteminfo";
+	
+	@Bean
+	RestTemplate getRestTemplate(){
+		return new RestTemplate();
+	}
+	
+	@Autowired
+	private CatalogInfoService catService;
+	
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	@RequestMapping(value= "/cataloginfo", produces=MediaType.APPLICATION_JSON_VALUE)
+	public Catalog getCatalogDetails(){
+		Catalog catalog = new Catalog();
+	catalog.setCatId("1");
+	catalog.setCatInfo("Apple");
+		return catService.getCatalogInfo();
+	}
+	
+	@RequestMapping(value= "/iteminfo", produces=MediaType.APPLICATION_JSON_VALUE)
+	public Catalog getItemDetails(){
+		Catalog catalog = new Catalog();
+		catalog.setCatId("1");
+		catalog.setCatInfo("Apple");
+		catalog.setItems(restTemplate.getForObject(infoUri, Item.class));
+		return catalog;
+	}
+	
+}

@@ -1,0 +1,34 @@
+package com.example.demo.service;
+
+import org.springframework.web.client.RestTemplate;
+
+import com.example.demo.model.Product;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
+public class ProductInfoServiceImpl implements PrdoductInfoService{
+
+	private final String reviewUri = "http://localhost:900/iteminfo/{id}";
+	
+	@Override
+	public Product getProduct(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+//	@Override
+//	@HystrixCommand(fallbackMethod = "defaultReview")
+//	public String getItemReview(int id) {
+//		String itemReviewJson = new RestTemplate().getForObject(reviewUri, String.class, id);
+//		return itemReviewJson;
+//	}
+//
+//	private String defaultReview(int id) {
+//		return "{\"id\":1,\"rating\":\"un-rated\",\"reviews\":\"un-reviewed\"}";
+//	}
+
+	@Override
+	public String getItemDetail(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

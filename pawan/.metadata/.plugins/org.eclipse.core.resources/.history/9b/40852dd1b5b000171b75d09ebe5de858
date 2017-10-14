@@ -1,0 +1,25 @@
+package com.example.demo.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Catalog;
+import com.example.demo.model.Item;
+
+@Service
+public class CatalogInfoService implements CatalogInfo {
+
+	@Override
+	public Catalog getCatalogInfo() {
+		Catalog catalog = new Catalog();
+		catalog.setCatId("1");
+		catalog.setCatInfo("Property");
+		return catalog;
+	}
+
+	@Override
+	public Item getItemInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

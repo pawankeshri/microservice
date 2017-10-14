@@ -1,0 +1,11 @@
+server:
+  port: 9797
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761
+ITEM-INFO:
+ ribbon:
+  eureka:
+    enabled:false
+  listofServers: localhost:9500  

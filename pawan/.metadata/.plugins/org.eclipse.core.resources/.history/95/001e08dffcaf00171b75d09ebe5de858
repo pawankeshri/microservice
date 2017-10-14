@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/pawankeshri/repo1/tree/branch1
+ profiles:
+    active:
+    - dev

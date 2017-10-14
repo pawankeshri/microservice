@@ -1,0 +1,10 @@
+package com.example.product;
+
+@RestController
+public class ProductController {
+
+	@RequestMapping(/getItem)
+	public String getItem(){
+		
+	}
+}

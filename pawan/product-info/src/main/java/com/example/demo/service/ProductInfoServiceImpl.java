@@ -1,0 +1,27 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.client.ItemClient;
+import com.example.demo.model.Item;
+import com.example.demo.model.Product;
+
+@Service
+public class ProductInfoServiceImpl implements PrdoductInfoService{
+
+	@Autowired
+	ItemClient itemClient;
+	private final String reviewUri = "http://localhost:900/iteminfo/{id}";
+	
+	@Override
+	public Product getProduct(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Item getItemDetail() {
+		return itemClient.getItemInfo();
+	}
+}

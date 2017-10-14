@@ -1,0 +1,60 @@
+package com.example.demo.model;
+
+public class Catalog {
+
+	private String catId;
+	private String catInfo;
+
+	
+	public Catalog() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "CatalogInfo [catId=" + catId + ", catInfo=" + catInfo + "]";
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((catId == null) ? 0 : catId.hashCode());
+		result = prime * result + ((catInfo == null) ? 0 : catInfo.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Catalog other = (Catalog) obj;
+		if (catId == null) {
+			if (other.catId != null)
+				return false;
+		} else if (!catId.equals(other.catId))
+			return false;
+		if (catInfo == null) {
+			if (other.catInfo != null)
+				return false;
+		} else if (!catInfo.equals(other.catInfo))
+			return false;
+		return true;
+	}
+	public String getCatId() {
+		return catId;
+	}
+	public void setCatId(String catId) {
+		this.catId = catId;
+	}
+	public String getCatInfo() {
+		return catInfo;
+	}
+	public void setCatInfo(String catInfo) {
+		this.catInfo = catInfo;
+	}
+	
+	
+}

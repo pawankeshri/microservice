@@ -1,0 +1,20 @@
+package com.example.demo.controller;
+
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.model.Item;
+
+@RestController
+public class CatalogInfoController {
+
+	@RequestMapping(value= "/cataloginfo", produces=MediaType.APPLICATION_JSON_VALUE)
+	public Catalog getItem(){
+		Item it = new Item();
+		it.setItemCode("1");
+		it.setItemInfo("Apple");
+		return it;
+	}
+	
+}

@@ -1,0 +1,12 @@
+package com.example.item;
+
+import java.util.List;
+
+import com.example.model.Item;
+
+public class Product {
+
+	private String productId;
+	private String productName;
+	private List<Item> items;
+}

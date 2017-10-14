@@ -1,0 +1,35 @@
+package com.example.demo.model;
+
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Product {
+
+	private String productId;
+	private String productName;
+	private List<Item> items;
+	
+	
+	public String getProductId() {
+		return productId;
+	}
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	public List<Item> getItems() {
+		return items;
+	}
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
+	
+	
+}

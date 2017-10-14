@@ -1,0 +1,23 @@
+package com.example.demo.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.example.demo.model.Product;
+
+public class ProductInfoServiceImpl implements PrdoductInfoService{
+
+	@Override
+	public Product getProduct(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getItemReview(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

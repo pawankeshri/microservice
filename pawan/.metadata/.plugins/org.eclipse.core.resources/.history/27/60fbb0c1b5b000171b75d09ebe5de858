@@ -1,0 +1,9 @@
+package com.example.demo.service;
+
+import com.example.demo.model.Catalog;
+
+public interface CatalogInfo {
+
+	public Catalog getCatalogInfo();
+	
+}
