@@ -1,0 +1,8 @@
+server:
+  port: 8701
+ 
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-remote-regions-registry: true
+    service-url:

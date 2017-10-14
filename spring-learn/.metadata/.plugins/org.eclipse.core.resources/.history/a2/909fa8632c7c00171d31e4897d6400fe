@@ -1,0 +1,17 @@
+package com.example.kafka;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.item.info.ItemInfo;
+
+public class ItemInfoProducer {
+	
+	
+    @Autowired
+   private Sender sender;
+	
+   public void sendInfo(final ItemInfo info) throws Exception {
+       sender.send(info,-1);
+   }
+}
